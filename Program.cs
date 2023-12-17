@@ -50,7 +50,7 @@ Console.WriteLine(s);
 все заглавные буквы заменены на строчные. 
 “aBcD1ef!-” => “abcd1ef!-” */
 
-
+/*
 Console.Write("Введите строку, содержащую латинские буквы в обоих регистрах: ");
 string s=Console.ReadLine();
 string news=string.Empty;
@@ -62,11 +62,32 @@ for(int i=0;i<s.Length;i++)
  
 Console.WriteLine("-------");
 Console.WriteLine(s+" => "+news);
-
+*/
 
 /*Задайте произвольную строку. Выясните, является ли она палиндромом. 
 “aBcD1ef!-” => Нет 
 “шалаш” => Да 
 “55655” => Да */
 
+//Console.Write("Введите строку: ");  //проблема с вводом
+    //string? str=Console.ReadLine();
 
+    /*
+    string str="шалаш";
+    bool res=true;
+    for(int i=0;i<=str.Length/2;i++)
+    {   
+        if (str[i]!=str[str.Length-1-i])
+        {
+            res=false;
+            Console.WriteLine($"{str} => Нет");
+            break;
+        }
+    }
+    if (res==true)
+    {
+        Console.WriteLine($"{str} => Да"); 
+    }
+    */
+
+    
