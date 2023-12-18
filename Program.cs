@@ -70,24 +70,72 @@ Console.WriteLine(s+" => "+news);
 “55655” => Да */
 
 //Console.Write("Введите строку: ");  //проблема с вводом
-    //string? str=Console.ReadLine();
+//string? str=Console.ReadLine();
 
-    /*
-    string str="шалаш";
-    bool res=true;
-    for(int i=0;i<=str.Length/2;i++)
-    {   
-        if (str[i]!=str[str.Length-1-i])
-        {
-            res=false;
-            Console.WriteLine($"{str} => Нет");
-            break;
-        }
-    }
-    if (res==true)
+/*
+string str="шалаш";
+bool res=true;
+for(int i=0;i<=str.Length/2;i++)
+{   
+    if (str[i]!=str[str.Length-1-i])
     {
-        Console.WriteLine($"{str} => Да"); 
+        res=false;
+        Console.WriteLine($"{str} => Нет");
+        break;
     }
-    */
+}
+if (res==true)
+{
+    Console.WriteLine($"{str} => Да"); 
+}
+*/
 
-    
+/*Задайте строку, состоящую из слов, разделенных пробелами. Сформировать строку, в которой 
+слова расположены в обратном порядке. В полученной строке слова должны быть также разделены пробелами. 
+“Hello my world” => “world my Hello”*/
+
+string s="Hello my world";
+ int countwords=1;
+ char k=' ';
+
+ for (int i=0; i<s.Length; i++)
+ {
+    if (s[i]==k)
+    {
+        countwords++;
+    }
+ }
+
+ Console.WriteLine("количество слов - "+ countwords);
+ string [] array = new string[countwords];
+
+ int index=0;
+ for (int i=0; i<s.Length; i++)
+ {
+    if (s[i]!=k)
+    {
+        array[index]+=s[i];                      
+    }
+    else
+    {
+       index++;                
+    }
+ }
+ for (int i = 0; i < array.Length; i++)
+ {
+    Console.Write(array[index]+"|"); 
+ }
+ string newstr=string.Empty;
+ for (int i=countwords-1; i <=0; i--)
+ {
+    if (i==0)
+    {
+        newstr+=array[i];
+    }
+    else
+    {
+        newstr+=array[i]+k;
+    }
+ }
+
+ Console.WriteLine(s + " => " + newstr);
